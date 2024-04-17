@@ -7,14 +7,16 @@ export const getNews = async ({
   page_number = 1,
   page_size = 10,
   category,
+  id,
 }) => {
   try {
-    const response = await axios.get(`${BASE_URL}search`, {
+    const response = await axios.get(`${BASE_URL}latest-news`, {
       params: {
         apiKey: API_KEY,
         page_number,
         page_size,
         category,
+        id
       },
     });
     return response.data;
@@ -33,5 +35,20 @@ export const getCategories = async () => {
     return response.data;
   } catch (error) {
     console.log(error);
+  }
+};
+
+export const getNewsById = async (id) => {
+  try {
+    const response = await axios.get(`${BASE_URL}latest-news`, {
+      params: {
+        apiKey: API_KEY,
+      },
+    });
+    const news = response.data.news;
+    return news.find(news => news.id === id);
+  } catch (error) {
+    console.log('Error fetching news:', error);
+    return null;
   }
 };

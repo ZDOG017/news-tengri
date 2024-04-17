@@ -1,17 +1,29 @@
 .header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 12px 24px;
-  background-color: white;
-  border-bottom: 1px solid #f2f4f5;
-  flex-direction: column;
-  gap: 12px;
+  padding: 20px 40px;
+  background-color: #0056b3; /* Deep blue background */
+  color: white; /* White text for contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex-direction: column; /* Stack children vertically */
+  gap: 8px; /* Space between title and date */
+  cursor: pointer; /* Indicates the header is clickable */
 }
 
 .title {
-  font-size: 28px;
+  font-size: 32px;
+  font-weight: bold; /* Bold font weight for title */
+  text-transform: uppercase; /* UPPERCASE text for stylistic preference */
+  letter-spacing: 2px; /* Spacing between letters */
+  margin: 0; /* Remove default margin */
+  cursor: pointer; /* Indicates the title is part of the clickable area */
 }
 
 .date {
-  font-size: 16px;
+  font-size: 18px;
+  font-style: italic; /* Italic style for the date */
+  opacity: 0.85; /* Slightly transparent to reduce visual dominance */
+  cursor: pointer; /* Indicates the date is part of the clickable area */
 }

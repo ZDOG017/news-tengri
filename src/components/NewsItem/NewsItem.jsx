@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import { formatTimeAgo } from "../../helpers/formatTimeAgo";
-
+import { Link } from "react-router-dom";
 const NewsItem = ({ item }) => {
   return (
     <li className={styles.item}>
@@ -13,6 +13,9 @@ const NewsItem = ({ item }) => {
         <p className={styles.extra}>
           {formatTimeAgo(item.published)} by {item.author}
         </p>
+        <Link to={`/news/${item.id}`} target="_blank" rel="noopener noreferrer">
+          View More
+        </Link>
       </div>
     </li>
   );
