@@ -1,8 +1,8 @@
 import Header from "./components/Header/Header";
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './pages/Main/Main'; // Assuming this component holds your NewsList
-import NewsDetail from './components/NewsDetail/NewsDetail'; // The component for displaying news details
+import Main from './pages/Main/Main';
+import NewsDetail from './components/NewsDetail/NewsDetail';
 
 const App = () => {
   return (
@@ -17,4 +17,3 @@ const App = () => {
 }
 
 export default App;
-
